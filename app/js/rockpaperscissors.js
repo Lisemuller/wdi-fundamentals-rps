@@ -46,29 +46,20 @@ function getWinner(playerMove,computerMove) {
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
 var PlayerMove ;
 var ComputerMove ;
-var Return ;
-    if (PlayerMove == 'Rock' && ComputerMove == 'Scissors') {
-        console.log(Return ='Player') ;
-}   
-    else if (PlayerMove == 'Scissors' && ComputerMove == 'Rock') {
-        console.log(Return ='Computer') ;
-}
-    else if (PlayerMove == 'Scissors' && ComputerMove == 'Paper') {
-        console.log(Return = 'Player') ;
-    }
-    else if (PlayerMove == 'Paper' && ComputerMove == 'Scissors') {
-        console.log(Return = 'Computer') ;
-    }
-    else if (PlayerMove == 'Paper' && ComputerMove == 'Rock') {
-        console.log(Return = 'Player') ;
-    }
-    else if (PlayerMove == 'Rock' && ComputerMove == 'Paper') {
-        console.log(Return = 'Player') ;
+     if ((PlayerMove == 'Rock' && ComputerMove == 'Scissors') ||
+    (PlayerMove == 'Scissors' && ComputerMove == 'Paper') ||
+    (PlayerMove == 'Paper' && ComputerMove == 'Rock') ||
+    (PlayerMove == 'Rock' && ComputerMove == 'Paper') ) {
+        winner ='Player' ;
+    } 
+    else if ((PlayerMove == 'Scissors' && ComputerMove == 'Rock')||
+    (PlayerMove == 'Paper' && ComputerMove == 'Scissors')) {
+        winner = 'Computer'
     }
     else if (PlayerMove == ComputerMove) {
-        console.log(Return = 'Tie')
+        winner = 'Tie';
     }
-    return winner;
+return winner ;
 }
 
 function playToFive() {
